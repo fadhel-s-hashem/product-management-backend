@@ -31,6 +31,10 @@ app.get('/', (req, res) => {
 })
 
 app.post('/products', productCtrl.create)
+app.get('/products', productCtrl.index)
+app.get('/products/:productId', productCtrl.show)
+app.put('/products/:productId', productCtrl.update)
+app.delete('/products/:productId', productCtrl.deleteProduct)
 
 const port = process.env.PORT || 3000
 
